@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function func1(a,b) {
+		var c=a+b;
+		alert(c);
+		return c;
+	}
+	function add() {
+		var a=document.getElementById("a").value;
+		var b=document.getElementById("b").value;
+		document.getElementById("sum").value=a+b;
+		document.getElementById("bold").innerhtml=a+b;
+		alert(parseInt(a)+parseInt(b));
+	}
+</script>
+</head>
+<body>
+	<button onclick="func1('123',4)">点我</button><br/>
+	输入第一个数字：<input id="a" type="text"/><br/>
+	输入第二个数字：<input id="b" type="text"/><br/>
+	<button onclick="add()">求和</button><br/>
+	<input id="sum">
+	<b id="bold">tet</b>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function func1(){
+		alert("哈哈");
+	}
+	function func2(){
+		var p1=document.getElementById("p1");
+		p1.innerHTML="不同意";
+	}
+	function func3(){
+		var pic=document.getElementById("pic");
+		pic.src="IMG.JPG";
+	}
+	function  func4() {
+		var p2=document.getElementById("p2");
+		p2.style.color="#ff0000";
+	}
+	function func5() {
+		var input=document.getElementById("age").value;
+		if(input==""||isNaN(input)){
+			alert("验证失败");
+		}else{
+			alert("验证成功");
+		}
+	}
+</script>
+</head>
+<body>
+	<p id="p1">123</p>
+	<script type="text/javascript">
+	document.write("<p>0123</p>");
+</script>
+	<button type="button" name="button1" onclick="func1()">点我</button>
+	
+	<button onclick="func2()">点这里</button><br/>
+	<img alt="" src="logo2.jpg" id="pic" onclick="func3()"/>
+	<p id="p2" onclick="func4()">test</p>
+	<input type="text" name="age" id="age"/>
+	<button id="age" onclick="func5()">验证</button>
+</body>
+</html>

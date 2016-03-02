@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<div id="div"></div>
+	<script type="text/javascript">
+		var str = "www.t66y.com";
+		var string = new String("www.youku.com");
+		var length = string.length;
+		var upper = string.toUpperCase();
+		document.getElementById("div").innerHTML = upper;
+		var chars = string.charAt(7);
+		document.getElementById("div").innerHTML = chars;
+		var index = string.indexOf("o", 0);
+		document.getElementById("div").innerHTML = index;
+		var sub=string.substring(2, 4);
+		document.getElementById("div").innerHTML = sub;
+		var split=string.split(".", 5);
+		for(var s in split){
+			document.write(split[s]+"<br/>");
+		}
+	</script>
+</body>
+</html>

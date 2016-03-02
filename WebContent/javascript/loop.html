@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function show() {
+		var cars = [ "Audi", "BMW", "Ford" ];
+		for (var i = 0; i < cars.length; i++) {
+			document.write(cars[i] + "<br/>");
+		}
+	}
+	function forinDemo() {
+		var person = {
+			name : "小白",
+			age : 18
+		};
+		var str = "";
+		for (x in person) {
+			str = str + x + ":" + person[x];
+		}
+		document.write(str);
+	}
+	function whileDemo() {
+		var i = 5;
+		while (i > 0) {
+			document.write("正在循环" + i + "<br/>");
+			i--;
+		}
+	}
+	function doWhile() {
+		var i=0;
+		do{
+			document.write("正在循环"+i+"<br/>");
+			i++
+		}while(i<10);
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="for" onclick="show()" />
+	<input type="button" value="forIn" onclick="forinDemo()" />
+	<input type="button" value="while" onclick="whileDemo()" />
+<input type="button" value="dowhile" onclick="doWhile()" />
+</body>
+</html>

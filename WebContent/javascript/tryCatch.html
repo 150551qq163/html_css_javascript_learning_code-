@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function tryCatch() {
+		try {
+			add();
+		} catch (e) {
+			document.getElementById("err").innerHTML = e.message;
+		}
+	}
+	function throwDemo() {
+		var age = document.getElementById("age").value;
+		try {
+			if (age == "") 
+				throw "年龄不能为空";
+			else if (isNaN(age)) 
+				throw "不是数字";
+			else if (age > 99 || age < 0)
+				throw "不在正常範圍內";
+			 else 
+				throw "正常年龄"+age;
+		} catch (e) {
+			document.getElementById("err").innerHTML=e;
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="try" onclick="tryCatch()" />
+	<br />
+	
+	请输入年龄：
+	<input type="text" id="age" />
+	<input type="button" value="try" onclick="throwDemo()" />
+	<br />
+	<div id="err"></div>
+</body>
+</html>

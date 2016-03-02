@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function compare(){
+		var score=document.getElementById("score").value;
+		if(score>60){
+			alert("及格");
+		}else{
+			alert("不及格");
+		}
+	}
+</script>
+</head>
+<body>
+	请输入您的成绩:<input type="text" id="score"/>
+	<input type="button" value="提交" onclick="compare()">
+</body>
+</html>

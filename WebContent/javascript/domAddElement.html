@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var i = 0;
+		var div1 = document.getElementById("div1");
+		document.getElementById("btn_add").onclick = function() {
+			i++;
+			var element_p = document.createElement("p");
+			element_p.setAttribute("id", "p" + i);
+			var text = document.createTextNode("新创建的段落" + i);
+			element_p.appendChild(text);
+			div1.appendChild(element_p);
+		}
+		document.getElementById("btn_delete").onclick = function() {
+			if (i > 0) {
+				div1.removeChild(document.getElementById("p" + i));
+				i--;
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<h2>动态添加元素</h2>
+	<input type="button" value="动态添加元素" id="btn_add" />
+	<input type="button" value="动态删除元素" id="btn_delete" />
+	<div id="div1"></div>
+
+</body>
+</html>

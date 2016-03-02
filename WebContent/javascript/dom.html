@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function domTest() {
+		alert("mouseover");
+		var p1 = document.getElementById("p1");
+		p1.setAttribute("title", "成功");
+	}
+	function domcss() {
+		var p1 = document.getElementById("p1");
+		p1.style.color = "#ff00ff";
+	}
+	window.onload = function() {
+		document.getElementById("h1").onclick = function() {
+			this.innerHTML = "谢谢";
+		}
+	}
+</script>
+</head>
+<body>
+	<p id="p1" title="测试dom">山无棱天地合才敢与君绝</p>
+	<input type="button" onclick="domTest()" value="dom测试" />
+	<input type="button" onclick="domcss()" value="domcss" />
+	<h1 onclick="this.innerHTML='谢谢'">点我</h1>
+	<h1 id="h1">点我</h1>
+</body>
+</html>

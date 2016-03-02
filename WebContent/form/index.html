@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>个人信息表</h1>
+	<form action="">
+	<fieldset>
+	<legend>基本信息</legend>
+	姓名：
+	<input type="text" name="username" /> 密码：
+	<input type="password" name="password" />
+	</fieldset>
+	<fieldset>
+	<legend>其它信息</legend>
+	爱好：
+	<input type="checkbox" name="favor" value="sing" />唱歌
+	<input type="checkbox" name="favor" value="sleep" />睡觉
+	<input type="checkbox" border="1" name="favor" value="powermilk" />泡妞
+	<br /> 性别:
+	<input type="radio" name="sex" value="male"> 男
+	<input type="radio" name="sex" value="female">女 <br/>城市:
+	<select name="city">
+		<option value="beijing">北京</option>
+		<option value="shanghai" >上海</option>
+		
+		<optgroup label="广东省">
+		<option value="guangzhou" selected="selected">广州</option>
+		<option value="shantou">汕头</option>
+		</optgroup>
+		<optgroup label="甘肃">
+			<option value="兰州">兰州</option>
+			<option value="武威">武威</option>
+		</optgroup>
+	</select>
+	</fieldset>
+	<fieldset>
+	<legend>自我介绍</legend>
+	<textarea rows="10" cols="20">文本域，10行20列</textarea>
+	</fieldset>
+	<input type="button" value="普通按钮"/>
+	<input type="submit" value="提交">
+	<input type="reset" value="重置">
+	</form>
+</body>
+</html>

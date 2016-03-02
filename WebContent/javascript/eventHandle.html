@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="eventHandle.js">
+	
+</script>
+</head>
+<body>
+	<form name="myForm">
+		<table>
+			<tr>
+				<td><input type="text" id="text" onfocus="onFocus()"
+					onblur="onBlur()" /></td>
+				<td><div id="name"></div></td>
+			</tr>
+			<tr>
+				<td><input type="text" readonly="readonly"
+					onmouseover="onMouseOver()" onmouseout="onMouseOut()" /></td>
+				<td><div id="age"></div></td>
+			</tr>
+			<tr>
+				<td>爱好</td>
+				<td><input type="checkbox" id="hobby" name="hobby" value="读书" />
+					读书<input type="checkbox" id="hobby" name="hobby" value="听歌" /> 听歌<input
+					type="checkbox" name="hobby" id="hobby" value="思考" />思考</td>
+				<td><input type="button" value="getChecked"
+					onclick="getChecked()" /></td>
+			</tr>
+			<tr>
+				<td>性别</td>
+				<td>男<input type="radio" id="sex" name="sex" value="男" />女<input
+					type="radio" id="sex" name="sex" value="女" />不男不女<input
+					type="radio" name="sex" id="sex" value="不男不女" /></td>
+				<td><input type="button" onclick="getSex()" value="性别" /></td>
+			</tr>
+			<tr>
+				<td>城市</td>
+				<td><select name="city" id="city">
+						<option value="北京">北京</option>
+						<option value="上海">上海</option>
+						<option value="广州">广州</option>
+				</select></td>
+				<td><input type="button" value="select" onclick="selectFunc()" /></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		document.getElementById("text").focus();
+	</script>
+	<img alt="图片1" id="img1" src="logo2.jpg" onmousemove="moveFunc()"
+		onmouseover="mouseOver()" onmouseout="mouseOut()"
+		onmousedown="mouseDown()" onmouseup="mouseUp()"/>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<br />
+</body>
+</html>
